@@ -1,9 +1,10 @@
 /**
  * OOPSBannerApp
- * Use Case 1 (UC1): Printing the literal text "OOPS" to the console.
+ * Use Case 2 (UC2): Printing the text "OOPS" as a large ASCII banner.
+ * Uses manual string concatenation and sequential print statements.
  * 
  * @author Aryan Saini
- * @version 1.0
+ * @version 2.0
  */
 public class OOPSBannerApp {
 
@@ -12,6 +13,12 @@ public class OOPSBannerApp {
      * @param args Command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("OOPS");
+        System.out.println("  ***  " + "  " + "  ***  " + "  " + " ****  " + "  " + "  **** ");
+        System.out.println(" *   * " + "  " + " *   * " + "  " + " *   * " + "  " + " *     ");
+        System.out.println(" *   * " + "  " + " *   * " + "  " + " *   * " + "  " + " *     ");
+        System.out.println(" *   * " + "  " + " *   * " + "  " + " ****  " + "  " + "  ***  ");
+        System.out.println(" *   * " + "  " + " *   * " + "  " + " *     " + "  " + "     * ");
+        System.out.println(" *   * " + "  " + " *   * " + "  " + " *     " + "  " + "     * ");
+        System.out.println("  ***  " + "  " + "  ***  " + "  " + " *     " + "  " + " ****  ");
     }
 }
