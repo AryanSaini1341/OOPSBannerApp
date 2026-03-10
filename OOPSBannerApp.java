@@ -1,30 +1,26 @@
+/**
+ * OOPSBannerApp
+ * Use Case 5 (UC5): Array Initialisation
+ * 
+ * @author Aryan Saini
+ * @version 5.0
+ */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] banner = new String[7];
+        // Array Declaration and Initialization in a single statement
+        String[] banner = {
+            String.join("   ", "*****", "*****", "*****", "*****"),
+            String.join("   ", "*   *", "*   *", "*   *", "*    "),
+            String.join("   ", "*   *", "*   *", "*   *", "*    "),
+            String.join("   ", "*   *", "*   *", "*****", "*****"),
+            String.join("   ", "*   *", "*   *", "*    ", "    *"),
+            String.join("   ", "*   *", "*   *", "*    ", "    *"),
+            String.join("   ", "*****", "*****", "*    ", "*****")
+        };
 
-        banner[0] = String.join("   ",
-                "*****", "*****", "*****", "*****");
-
-        banner[1] = String.join("   ",
-                "*   *", "*   *", "*   *", "*    ");
-
-        banner[2] = String.join("   ",
-                "*   *", "*   *", "*   *", "*    ");
-
-        banner[3] = String.join("   ",
-                "*   *", "*   *", "*****", "*****");
-
-        banner[4] = String.join("   ",
-                "*   *", "*   *", "*    ", "    *");
-
-        banner[5] = String.join("   ",
-                "*   *", "*   *", "*    ", "    *");
-
-        banner[6] = String.join("   ",
-                "*****", "*****", "*    ", "*****");
-
+        // Enhanced for loop to print the banner
         for (String line : banner) {
             System.out.println(line);
         }
