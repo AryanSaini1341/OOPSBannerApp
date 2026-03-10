@@ -4,10 +4,10 @@
 
 /**
  * OOPSBannerApp
- * Use Case 5 (UC5): Array Initialisation using join
+ * Use Case 6 (UC6): Static Functions
  * 
  * @author Aryan Saini
- * @version 5.0
+ * @version 6.0
  */
 
 // Helper function to simulate Java's String.join()
@@ -22,17 +22,55 @@ std::string join(const std::string& delimiter, const std::vector<std::string>& s
     return result;
 }
 
-int main() {
-    // Array Declaration and Initialization in a single statement
-    std::string bannerLines[] = {
-        join("  ", {"  ***  ", "  ***  ", " ****  ", "  **** "}),
-        join("  ", {" *   * ", " *   * ", " *   * ", " *     "}),
-        join("  ", {" *   * ", " *   * ", " *   * ", " *     "}),
-        join("  ", {" *   * ", " *   * ", " ****  ", "  ***  "}),
-        join("  ", {" *   * ", " *   * ", " *     ", "     * "}),
-        join("  ", {" *   * ", " *   * ", " *     ", "     * "}),
-        join("  ", {"  ***  ", "  ***  ", " *     ", " ****  "})
+// Static helper functions to generate character patterns
+std::vector<std::string> getO() {
+    return {
+        "  ***  ",
+        " *   * ",
+        " *   * ",
+        " *   * ",
+        " *   * ",
+        " *   * ",
+        "  ***  "
     };
+}
+
+std::vector<std::string> getP() {
+    return {
+        " ****  ",
+        " *   * ",
+        " *   * ",
+        " ****  ",
+        " *     ",
+        " *     ",
+        " *     "
+    };
+}
+
+std::vector<std::string> getS() {
+    return {
+        "  **** ",
+        " *     ",
+        " *     ",
+        "  ***  ",
+        "     * ",
+        "     * ",
+        " ****  "
+    };
+}
+
+int main() {
+    // Generate arrays for each character
+    std::vector<std::string> charO1 = getO();
+    std::vector<std::string> charO2 = getO();
+    std::vector<std::string> charP = getP();
+    std::vector<std::string> charS = getS();
+
+    // Array Declaration and Initialization using join
+    std::string bannerLines[7];
+    for (int i = 0; i < 7; ++i) {
+        bannerLines[i] = join("  ", {charO1[i], charO2[i], charP[i], charS[i]});
+    }
 
     // Enhanced for loop to print the banner
     for (const std::string& line : bannerLines) {
