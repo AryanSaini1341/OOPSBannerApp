@@ -1,24 +1,32 @@
-/**
- * OOPSBannerApp
- * Use Case 2 (UC2): Printing the text "OOPS" as a large ASCII banner.
- * Uses manual string concatenation and sequential print statements.
- * 
- * @author Aryan Saini
- * @version 2.0
- */
 public class OOPSBannerApp {
 
-    /**
-     * Main method - application entry point.
-     * @param args Command line arguments
-     */
     public static void main(String[] args) {
-        System.out.println("  ***  " + "  " + "  ***  " + "  " + " ****  " + "  " + "  **** ");
-        System.out.println(" *   * " + "  " + " *   * " + "  " + " *   * " + "  " + " *     ");
-        System.out.println(" *   * " + "  " + " *   * " + "  " + " *   * " + "  " + " *     ");
-        System.out.println(" *   * " + "  " + " *   * " + "  " + " ****  " + "  " + "  ***  ");
-        System.out.println(" *   * " + "  " + " *   * " + "  " + " *     " + "  " + "     * ");
-        System.out.println(" *   * " + "  " + " *   * " + "  " + " *     " + "  " + "     * ");
-        System.out.println("  ***  " + "  " + "  ***  " + "  " + " *     " + "  " + " ****  ");
+
+        String[] banner = new String[7];
+
+        banner[0] = String.join("   ",
+                "*****", "*****", "*****", "*****");
+
+        banner[1] = String.join("   ",
+                "*   *", "*   *", "*   *", "*    ");
+
+        banner[2] = String.join("   ",
+                "*   *", "*   *", "*   *", "*    ");
+
+        banner[3] = String.join("   ",
+                "*   *", "*   *", "*****", "*****");
+
+        banner[4] = String.join("   ",
+                "*   *", "*   *", "*    ", "    *");
+
+        banner[5] = String.join("   ",
+                "*   *", "*   *", "*    ", "    *");
+
+        banner[6] = String.join("   ",
+                "*****", "*****", "*    ", "*****");
+
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
